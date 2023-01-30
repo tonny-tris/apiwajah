@@ -91,7 +91,7 @@ async def main(info: Request):
       }
   }
 
-@app.options("/deteksiwajah", status_code=200)
+@app.post("/deteksiwajah", status_code=200)
 async def main(info: Request, response: Response):
     req = await info.json()
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
